@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prjConCsIntroduction
+{
+    internal class SalaryCalculation
+    { 
+        static void MainSC(string[] args)
+        {
+
+            string name;
+            double rate, workHr, otHr, weekSal, otSal, revenue, otRate; 
+
+            Console.WriteLine("\t\tGAME-STORE INC");
+            Console.WriteLine("\tEmployee Salary Computation");
+            Console.WriteLine("\t\t----------------");
+
+            Console.Write("Enter your name : ");
+            name = Console.ReadLine();
+            Console.Write("Enter your hourly rate $ : ");
+            rate = double.Parse(Console.ReadLine());
+            Console.Write("Enter your number of hours worked : ");
+            workHr = double.Parse(Console.ReadLine());
+            Console.Write("Enter your overtime hours worked : ");
+            otHr = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nThank you,");
+            Console.WriteLine("Sir or Miss " + name + ",");
+
+            weekSal = rate * workHr;
+            otRate = 1.5 * rate;                    // the overtime rate is 1.5 times the normal rate
+            otSal = otRate * otHr;
+
+            revenue = weekSal + otSal;
+
+            Console.WriteLine("Your weekly salary is " + weekSal + " $");
+            Console.WriteLine("Your overtime salary is " + otSal + " $");
+            Console.WriteLine("Your total revenue is " + revenue + " $");
+
+
+        }
+    }
+}
