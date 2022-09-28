@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prjConCsIntroduction
+{
+    internal class BasicOperator
+    {
+        static void Main(string[] args)
+        {
+
+
+            double val1, val2;
+
+            Console.WriteLine("\tCALCULATOR");
+            Console.WriteLine("\t____ ____");
+
+            Console.Write("Enter value 1: ");
+            val1 = Convert.ToDouble(Console.ReadLine());
+
+            do
+            {
+
+                Console.Write("Error! value 1 cannot be smaller than or equal to zero: ");
+                val1 = Convert.ToDouble(Console.ReadLine());
+
+            } while (val1 <= 0);
+
+            Console.Write("Enter value 2: ");
+            val2 = Convert.ToDouble(Console.ReadLine());
+
+            do
+            {
+
+                Console.Write("Error! value 2 cannot be smaller than or equal to zero: ");
+                val2 = Convert.ToDouble(Console.ReadLine());
+
+            } while (val2 <= 0);
+
+            Console.WriteLine("\nAddition of " + val1 + " and " + val2 + " is " + (val1 + val2));
+            Console.WriteLine("Subtraction of " + val1 + " and " + val2 + " is " + (val1 - val2));
+            Console.WriteLine("Multiplication of " + val1 + " and " + val2 + " is " + (val1 * val2));
+            Console.WriteLine("Division of " + val1 + " and " + val2 + " is " + (val1 / val2));
+            Console.WriteLine("Modulo of " + val1 + " and " + val2 + " is " + (val1 % val2));
+
+            Console.WriteLine("\n" + val1 + " greater than " + val2 + " is " + (val1 > val2));
+            Console.WriteLine(val1 + " smaller than " + val2 + " is " + (val1 < val2));
+            Console.WriteLine(val1 + " greater than or equal to " + val2 + " is " + (val1 >= val2));
+            Console.WriteLine(val1 + " smaller than or equal to " + val2 + " is " + (val1 <= val2));
+            Console.WriteLine(val1 + " equal to " + val2 + " is " + (val1 == val2));
+            Console.WriteLine(val1 + " different to " + val2 + " is " + (val1 != val2) + "\n");
+
+
+        }
+    }
+}
