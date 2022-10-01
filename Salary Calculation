@@ -8,11 +8,11 @@ namespace prjConCsIntroduction
 {
     internal class SalaryCalculation
     { 
-        static void MainSC(string[] args)
+        static void Main(string[] args)           // main function
         {
 
             string name;
-            double rate, workHr, otHr, weekSal, otSal, revenue, otRate; 
+            float rate, workHr, otHr, weekSal, otSal, revenue, otRate;  // add a comment why you chose this type of variable
 
             Console.WriteLine("\t\tGAME-STORE INC");
             Console.WriteLine("\tEmployee Salary Computation");
@@ -21,17 +21,18 @@ namespace prjConCsIntroduction
             Console.Write("Enter your name : ");
             name = Console.ReadLine();
             Console.Write("Enter your hourly rate $ : ");
-            rate = double.Parse(Console.ReadLine());
+            rate = float.Parse(Console.ReadLine());
             Console.Write("Enter your number of hours worked : ");
-            workHr = double.Parse(Console.ReadLine());
+            workHr = float.Parse(Console.ReadLine());
             Console.Write("Enter your overtime hours worked : ");
-            otHr = double.Parse(Console.ReadLine());
+            otHr = float.Parse(Console.ReadLine());
 
             Console.WriteLine("\nThank you,");
             Console.WriteLine("Sir or Miss " + name + ",");
 
             weekSal = rate * workHr;
-            otRate = 1.5 * rate;                    // the overtime rate is 1.5 times the normal rate
+            otRate = 1.5F * rate;     // the overtime rate is 1.5 times the normal rate
+                                      // value that has a decimal point/comma is automatically read as a double
             otSal = otRate * otHr;
 
             revenue = weekSal + otSal;
@@ -40,7 +41,7 @@ namespace prjConCsIntroduction
             Console.WriteLine("Your overtime salary is " + otSal + " $");
             Console.WriteLine("Your total revenue is " + revenue + " $");
 
-
+            
         }
     }
 }
