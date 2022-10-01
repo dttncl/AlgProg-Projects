@@ -1,0 +1,58 @@
+ public static void EvalNum2Alpha ()   //Exo2
+        {
+            string name, alphaGrade, result;
+            Int16 numGrade;
+
+            Console.WriteLine("\t_______________");
+
+            Console.Write("Enter your name: ");
+            name = Console.ReadLine();
+
+            Console.Write("Enter your numeric grade: ");
+            numGrade = Int16.Parse(Console.ReadLine());
+
+            Console.WriteLine("Sir or Miss " + name + ",");
+
+            if(numGrade>=90 && numGrade<=100)
+            {
+                alphaGrade = "A";
+            }
+            else if(numGrade >= 80 && numGrade <= 89)
+            {
+                alphaGrade = "B";
+            }
+            else if(numGrade >= 70 && numGrade <= 79)
+            {
+                alphaGrade = "C";
+            }
+            else if(numGrade >= 60 && numGrade <= 69)
+            {
+                alphaGrade = "D";
+            }
+            else if(numGrade >= 0 && numGrade <= 59)
+            {
+                alphaGrade = "E";
+            }
+            else
+            {
+                alphaGrade = "not found. Your numeric grade is INVALID.";
+            }
+
+            Console.WriteLine("With " + numGrade + ", your Alpha is " + alphaGrade);
+
+            if(numGrade>=60 && numGrade<=100)
+            {
+                result = "PASS";
+            }
+            else if(numGrade >= 0 && numGrade <= 59)
+            {
+                result = "FAIL";
+            }
+            else
+            {
+                result = "entered an INVALID grade.";
+            }
+
+            Console.WriteLine("You " + result);
+
+        }
