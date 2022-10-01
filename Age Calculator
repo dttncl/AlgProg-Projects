@@ -1,0 +1,58 @@
+public static void EvaluateStudent ()   //Exo1
+        {
+            string name, gender, title, category;
+            Int16 yBirth, age ;
+
+            Console.WriteLine("\t---------------");
+
+            Console.Write("Enter your name: ");
+            name = Console.ReadLine();
+
+            Console.Write("Select gender (m/f): ");
+            gender = Console.ReadLine();
+
+            /*
+            if(gender=="m" || gender=="M")
+            {
+                title = "Sir ";
+            }
+            else
+            {
+                title = "Miss ";
+            }
+            */
+
+            title = (gender == "m" || gender == "M") ? "Sir " : "Miss ";
+
+            Console.WriteLine(title + name + ",");
+            Console.Write("Enter your year of birth: ");
+
+            yBirth = Int16.Parse(Console.ReadLine());
+            age = Convert.ToInt16(2022 - yBirth);
+
+            Console.WriteLine("Born in " + yBirth + ", you are " + age + " years old");
+
+            if (age >= 1 && age <= 12)
+            {
+                category = "a CHILD";
+            }
+            else if (age >= 13 && age <= 18)
+            {
+                category = "a TEENAGER";
+            }
+            else if (age >= 19 && age <= 70)
+            {
+                category = "an ADULT";
+            }
+            else if (age >= 71 && age <= 100)
+            {
+                category = "a SENIOR";
+            }
+            else
+            { 
+                category = "a WALKING DEAD";
+            }
+
+            Console.WriteLine("You are " + category);
+
+        }
