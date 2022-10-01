@@ -1,0 +1,51 @@
+public static void EvalAplha2Num ()   //Exo3
+        {
+            string name, alphaGrade, numRange, result;
+
+            Console.WriteLine("\t_______________");
+
+            Console.Write("Enter your name: ");
+            name = Console.ReadLine();
+
+            Console.Write("Enter your alpha grade (A-E): ");
+            alphaGrade = Console.ReadLine();
+
+            Console.WriteLine("Sir or Miss " + name + ",");
+
+            switch(alphaGrade)
+            {
+                case "A":
+                case "a":
+                    numRange = "90 - 100";
+                    result = "PASS";
+                    break;
+                case "B":
+                case "b":
+                    numRange = "80 - 89";
+                    result = "PASS";
+                    break;
+                case "C":
+                case "c":
+                    numRange = "70 - 79";
+                    result = "PASS";
+                    break;
+                case "D":
+                case "d":
+                    numRange = "60 - 69";
+                    result = "PASS";
+                    break;
+                case "E":
+                case "e":
+                    numRange = "0 - 59";
+                    result = "FAIL";
+                    break;
+                default:
+                    numRange = "INVALID range.";
+                    result = "entered INVALID alpha grade.";
+                    break;
+            }
+
+            Console.WriteLine("With " + alphaGrade + ", your numeric is between " + numRange);
+            Console.WriteLine("You " + result);
+
+        }
